@@ -1,0 +1,35 @@
+{
+  "name": "neural-network-js",
+  "version": "0.0.1",
+  "description": "js neural network library",
+  "main": "app/dist/app.min.js",
+  "module": "esm.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c",
+    "dev": " rollup -c -w",
+    "dev-reload": "reload -b -d ./app -p 8000 | rollup -c -w",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'tests/**/*.ts'",
+    "test:coverage": "nyc yarn test"
+  },
+  "dependencies": {
+    "typescript": "^4.4.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.0",
+    "nyc": "^15.1.0",
+    "reload": "^3.2.0",
+    "require": "^2.4.20",
+    "rollup": "^2.56.3",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-node": "^10.2.1"
+  }
+}

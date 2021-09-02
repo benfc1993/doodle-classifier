@@ -1,0 +1,12 @@
+{
+    "include": ["src/*", "app/index.d.ts"],
+    "exclude": ["./tests/", "./node_modules/", "app/dist"],
+    "compilerOptions": {
+        "outDir": "app/dist",
+        "declaration": true,
+        "declarationDir": ".",
+        "moduleResolution": "node",
+        "resolveJsonModule": true
+        // "esModuleInterop": true
+    }
+}
